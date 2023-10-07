@@ -10,9 +10,9 @@ body{
 
 header {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     padding: 5%;
-    background: #9DF2CA;
+    background: #940163;
   }
 
   main {
@@ -24,7 +24,24 @@ header {
   .menu {
     display: flex;
   }
+  
+  button{
+    height: 40px;
+    width: 70px;
+    border: solid;
+    border-color: #e461f5;
+    border-radius: 10px;
+  }
 
   .file-list {
     display: flex;
   }
+
+  h1{
+    color: #FFFFFF;
+  }
+
+  a{
+    text-decoration: none;
+  }
+
