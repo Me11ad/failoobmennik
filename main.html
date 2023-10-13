@@ -17,10 +17,13 @@
         </div>
     </header>
     <form enctype="multipart/form-data" method="post">
-        <p><input type="file" name="f">
-        <input type="submit" value="Отправить"></p>
+        <div class="file-uploader">
+            <label class>
+                <p><input type="file" name="f[]" multiple>
+                <span>Выберите файл</span>
+                <input type="submit" value="Отправить"></p>
+            </label>
+            <div class="input-file-list"></div>
+        </div>
     </form>
-    <main>
-        <div class="file-list"></div>
-    </main>
 </body>

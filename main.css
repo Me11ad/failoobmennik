@@ -45,3 +45,7 @@ header {
     text-decoration: none;
   }
 
+  /* Disabled */
+.file-uploader input[type=file]:disabled + span{
+  background-color: #eee;
+}
