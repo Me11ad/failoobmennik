@@ -5,6 +5,10 @@
 }
 
 body{
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
     background: #E5FFF9;
 }
 
@@ -43,6 +47,11 @@ header {
 
   a{
     text-decoration: none;
+  }
+
+  form{
+    display: flex;
+    justify-content: center;
   }
 
   /* Disabled */
