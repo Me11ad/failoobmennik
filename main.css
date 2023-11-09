@@ -8,6 +8,7 @@ body{
     margin: 0 auto;
     display: flex;
     flex-direction: column;
+    align-items: center;
     flex-wrap: wrap;
     background: #E5FFF9;
 }
@@ -15,6 +16,8 @@ body{
 header {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    width: 100%;
     padding: 5%;
     background: #940163;
   }
@@ -45,6 +48,13 @@ header {
     color: #FFFFFF;
   }
 
+  span{
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 10%;
+  }
+
   a{
     text-decoration: none;
   }
@@ -71,6 +81,7 @@ header {
     border-radius: 8px;
     user-select: none;
     cursor: pointer;
+    margin: 4%;
 }
 
 input {
