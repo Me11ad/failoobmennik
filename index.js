@@ -110,4 +110,14 @@ const createText = text => {
     reader.onload = () => B.innerHTML = `<p><pre>${reader.result}</pre></p>`
 }
 
-}})
+const createFrame = (pdf) => {
+    const iframe = D.createElement("iframe");
+    iframe.src = URL.createObjectURL(pdf);
+    iframe.width = innerWidth;
+    iframe.height = innerHeight;
+    log(iframe);
+    B.append(iframe);
+    URL.revokeObjectURL(pdf);
+};
+
+}})(document, document.body);
