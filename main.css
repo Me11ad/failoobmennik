@@ -58,3 +58,26 @@ header {
 .file-uploader input[type=file]:disabled + span{
   background-color: #eee;
 }
+
+.drandrop{
+    width: 150px;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3cm;
+    font-weight: bold;
+    border: 5px solid;
+    border-radius: 8px;
+    user-select: none;
+    cursor: pointer;
+}
+
+input {
+  display: none;
+}
+
+img,audio,video{
+  max-width: 80vw;
+  max-height: 80vh;
+}

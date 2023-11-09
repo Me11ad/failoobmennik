@@ -67,7 +67,58 @@ console.log(arg)) => {
             createText(file);
             break;
         
-        default
+        default:
+            B.innerHTML = `<h3>Unknown File Format!</h3>`;
+            const timer = setTimeout(() => {
+                location.reload();
+                clearTimeout(timer);
+            }, 2000);
+            break;
     }
-}
-}
+};
+
+    const createImage = (image) => {
+        const imageEl = D.createElement("img");
+        imageEl.src = URL.createObjectURL(image);
+        log(imageEl);
+        B.append(imageEl);
+        URL.revokeObjectURL(image);
+    };
+
+    const createAudio = (audio) => {
+        const audioEl = D.createElement("audio");
+        audioEl.setAttribute("controls", "");
+        audioEl.src = URL.createObjectURL(audio);
+        log(audioEl);
+        B.append(audioEl);
+        audioEl.play();
+        URL.revokeObjectURL(audio);
+    };
+
+    const createVideo = (video) => {
+        const videoEl = D.createElement("video");
+        videoEl.setAttribute("controls", "");
+        videoEl.setAttribute("loop","true");
+        videoEl.src = URL.createObjectURL(video);
+        log(videoEl);
+        B.append(videoEl);
+        videoEl.play();
+        URL.revokeObjectURL(video);
+    };
+
+    const createText = (text) => {
+        const reader = new FileReader();
+        reader.readAsText(text, "windows-1251");
+        reader.onload = () => (B.innerHTML = `<p><pre>${reader.result}</pre></p>`)
+    };
+
+    const createFrame = (pdf) => {
+        const iframe = D.createElement("iframe");
+        iframe.src = URL.createObjectURL(pdf);
+        iframe.width = innerWidth;
+        iframe.height = innerHeight;
+        log(iframe);
+        B.append(iframe);
+        URL.revokeObjectURL(pdf);
+    };
+})(document, document.body);
