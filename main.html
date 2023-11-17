@@ -21,9 +21,11 @@
     <form enctype="multipart/form-data" method="post">
         <div class="file-uploader">
             <label class>
-                <p><input type="file" id="files" name="files[]" multiple>
-                <span>Выберите файл</span>
-                <input type="submit" value="Отправить"></p>
+                <input type="file" id="files" name="files[]" multiple>
+                <div id="list"></div>
+                <script src="uploader.js"></script>
+                <!-- <span>Выберите файл</span>
+                <input type="submit" value="Отправить"></p> -->
             </label>
             <div class="input-file-list">
                 <p>Файлы не найдены</p>
@@ -31,3 +33,4 @@
         </div>
     </form>
 </body>
+</html>

@@ -8,6 +8,8 @@ function printFiles(e) {
         output += "<li><p><strong>" + file.name + "</strong></p>";
         output += "<p>Type: " + file.type || "n/a</p>";
         output += "<p>Size: " + file.size + " bytes</p>";
-        output += "<p>"
-    } 
+        output += "<p>Changed on: " + file.ModifiedDate.toLocaleDateString() + "</p></li>";
+    }
+    document.getElementsById("list").innerHTML = "<ul>" + output + "</ul>";
 }
+document.getElementById("files").addEventListener("change", printFiles);
