@@ -1,14 +1,17 @@
-const http = require("http");
+const express = require("express");
+const multer = require("multer");
 
-const host = 'localhost';
-const port = 8000;
+const app = express();
+const upload = multer({ dest:"files" });
 
-const requestListener = function (req, res) {
-    res.writeHead(200);
-    res.end("My first server!");
-}
+app.post("/upload", upload.single("file"), function (req, res){
+    const { file } = req;
 
-const server = http.createServer(requestListener);
-server.listen(port, host, () => {
-    console.log(`Server is running on http://${host}:${port}`);
+    if (file) {
+        res.send("Файл загружен успешно");
+    } else {
+        res.error("Ошибка");
+    }
 });
+
+app.listen(3000);
